@@ -1,0 +1,373 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: linear-gradient(135deg, #f8f6f4, #b3dfaf);
+    color: rgb(10, 10, 10);
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 15px 30px;
+    color: rgb(10, 10, 10);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #0f0f0f;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(10, 10, 10);
+    font-size: 18px;
+    font-weight: 700;
+    transition: 0.3s ease-in-out;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+/* Hover Effect */
+.nav-links a:hover {
+    background: linear-gradient(90deg, #ffcc00, #ff8800);
+    color: #333;
+    transform: scale(1.1);
+}
+
+/* Hamburger Menu */
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    color: rgb(10, 10, 10);
+}
+
+/* Hide Checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Home Section */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 50px;
+}
+
+/* Content Layout */
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; 
+    max-width: 900px; 
+    margin: auto; 
+}
+
+/* Text Styling */
+.text {
+    text-align: left; 
+    max-width: 400px;
+}
+
+/* Image Styling */
+.profile-img {
+    width: 250px; 
+    height: auto;
+    border-radius: 10px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        text-align: center;
+        padding: 10px 0;
+        transition: 0.3s;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    /* Show menu when checkbox is checked */
+    #menu-toggle:checked ~ nav .nav-links {
+        display: flex;
+    }
+
+    /* Stack text and image vertically */
+    .content {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .profile-img {
+        width: 150px; 
+    }
+
+
+    /* Eto yung css ng About Page */
+#about {
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f8f6f4, #b3dfaf);
+}
+
+.about-container {
+    display: flex;
+    max-width: 700px;
+    align-items: center;
+    gap: 40px;
+    text-align: left;
+}
+
+/* Profile Image Styling */
+.about-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+}
+
+/* About Text Styling */
+.about-text h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.about-text p {
+    font-size: 18px;
+    color: #222;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+/* Skills List */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.skills-list li {
+    list-style: none;
+    background: #ff8800;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.skills-list li:hover {
+    background: #ffcc00;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        max-width: 100%;
+    }
+
+    .skills-list {
+        justify-content: center;
+    }
+
+    .about-image img {
+        max-width: 300px; 
+        width: 150%;
+        height: auto;
+        border-radius: 50%;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out;
+    }
+    
+}
+
+
+/* Eto naman yung sa Project page ko*/
+/* Main container for projects */
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Each project item */
+.project {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project:hover {
+    transform: scale(1.02);
+}
+
+/* Image styling */
+.project img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Description styling */   
+.project-description {
+    flex: 1;
+    text-align: left;
+}
+
+.project-description h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.project-description p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .project-description {
+        text-align: center;
+    }
+}
+
+
+/* Eto naman yung sa contact page ko*/
+.contact-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 15px; 
+    margin-top: 20px;
+}
+
+.contact-container a {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space sa icon at text */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+    width: 200px;
+    text-align: center;
+    justify-content: center;
+}
+
+.contact-container a:hover {
+    background-color: #ddd;
+}
+
+.contact-container i {
+    font-size: 24px;
+}
+
+
+
+
+
+
+
+
+
+}
